@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Ben Regner - Biophysics and Modeling</title>
+  <meta name="description" content="Ben Regner - Biophysics and Modeling">
+  <meta name="author" content="Ben Regner">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  <link type='text/css' rel='stylesheet' href='css/style.css'/>
+
+</head>
+
+<body>
+<nav class="navbar navbar-fixed-top" role="banner">
+  <div class="container" style="height: 72px;">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="./index.html" class="navbar-brand" style="font-size: 21px; padding-top: 26px; padding-bottom: 26px;">BEN REGNER   <small style="color:#777; font-size:14px; padding-left:3px; padding-right: 50px;">BIOPHYSICS &middot; MODELING</small></a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation" id="rightnav">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#projects">PROJECTS</a>
+        </li>
+        <li>
+          <a href="./resources/resume.pdf">RESUME</a>
+        </li>
+        <li>
+          <a href="http://cnl.salk.edu/People/Contact/?ID=1257">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</nav>
+
+<!--Main-->
+<div id="main">
+
+  <div class="container" id="mainwrapper">
+    <hr>
+    <div class="col-sm-12">
+      <img width="70%" src="./resources/cell_model.jpg">
+      <div id="bio" style="text-align: left">
+        <p>
+        <h4>About </h4>
+        I am a postdoctoral research scientist working with Professor Terry Sejnowski in the <a href="http://cnl.salk.edu">Computational Neurobiology Laboratory</a> at the Salk Institute for Biological Studies working on multiscale modeling of biological systems. I'm currently focused on a collaboration with Professor Larry Frank at the <a href="http://csci.ucsd.edu">Center for Scientific Computation in Imaging</a> at the University of California, San Diego in which we are investigating the feasibility of neuronal current MRI. Lately, I've also been thinking about how biological systems coordinate information processing across multiple length and time scales. Details of current and previous projects can be found below.  </p>
+      </div>
+    </div>
+  </div><!-- container -->
+
+
+  <div class="container" id="projects" style="text-align: left">
+    <hr>
+    <div class="col-sm-12">
+      <h4>Projects</h4>
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#anomDiff" style="background-color:lightsteelblue;">
+            <h4 class="panel-title">
+            <!--a data-toggle="collapse" data-parent="#accordion" href="#anomDiff" 
+             href="#anomDiff"-->
+            <a class="accordion-toggle">
+              Anomalous Diffusion of Single Particles in Cytoplasm
+            </a>
+            </h4>
+          </div>
+          <div id="anomDiff" class="panel-collapse collapse">
+            <div class="panel-body" style="text-align: left">
+              <p><font size="2">
+              <a href="http://maeresearch.ucsd.edu/tartakovsky/Papers/regner-2013-anomalous.pdf">Regner, B. M., Vučinić, D., Domnisoru, C., Bartol, T. M., Hetzer, M. W., Tartakovsky, D. M., & Sejnowski, T. J. (2013). Anomalous Diffusion of Single Particles in Cytoplasm. Biophysical Journal, 104(8), 1652-1660.</a></font></p>
+              <p>
+              Computational models of biological systems rely on combining mathematical models of the interacting dynamical processes that make up the system. Reaction-diffusion systems have been particularly useful in understanding a variety of biological processes, from pattern formation to the spread of epidemics. When modeling processes at the cellular level, a common assumption is that the diffusion follows Brownian motion with Gaussian statistics. However, there is a large body of evidence that molecules in the cytoplasm of a cell exhibits anomalous diffusion with non-Gaussian statistics. There are a variety of stochastic partial differential equations that have been proposed to model anomalous diffusion, in this work we aimed to find processes that are able to reproduce biological diffusion observed in an experimental setup.
+              </p>
+              <p>
+              For our experimental setup we built a novel light microscope that uses acousto-optic deflectors (AODs) to rapidly capture 3D trajectories of diffusing fluorescent particles. Analysis of several experimental conditions revealed both sub- and super-diffusive statistics depending on the presence of microtubules in a cellular extract. A main parameter for classification is the anomalous diffusion exponent, a power-law exponent relating the mean square displacement (MSD) and time. Another important parameter for classification is how an ergodicity measure depends on lag time Δ in a pre-ergodic regime. This time-varying distribution changes depending on the generating stochastic process, which is used to classify our data (Figure 1).
+              </p>
+              <div style="text-align:center">
+                <a href="./resources/rp_fig_1.png" imageanchore="1">
+                <img border="0" width="50%" src="./resources/rp_fig_1.png"/>
+                </a>
+              </div>
+              <div style="text-align:center">
+                <font size="2">Figure 1: Time-averaged MSD distributions as a function of lag time. Three experimental and three modeling conditions are shown. The three experimental conditions, shown in the left column, are a standard buffer solution (buffer), a cellular extract taken from <i>Xenopus </i>oocytes (extract) and the same extract treated with nocodazole to depolymerize microtubules. In the right column are results from modeling simulations, BM denotes Brownian motion, CTRW denotes continuous time random walk, and fBM denotes fractional Brownian motion.</font>
+              </div>
+              <br>
+              <p>
+              We find that free diffusion in cytoplasm (extract+noc) is subdiffusive and can be fit by a continuous time random walk with power law distributed spatial steps. In our data set, the anomalous exponent was found to be approximately 0.6. For cytoskeletal transport along microtubules (extract), superdiffusive statistics are observed. This energy-consuming transport can be modeled by a fractional Brownian motion with a Hurst exponent of 1.5.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#identifyTransport" style="background-color:lightsteelblue;">
+            <h4 class="panel-title">
+            <a class="accordion-toggle">
+              Identifying Transport Behavior of Single-Molecule Trajectories
+            </a>
+            </h4>
+          </div>
+          <div id="identifyTransport" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>
+              <font size="2"><a href="http://maeresearch.ucsd.edu/tartakovsky/Papers/regner-2014-identifying.pdf">Regner, B. M., Tartakovsky, D. M., & Sejnowski, T. J. (2014). Identifying Transport Behavior of Single-Molecule Trajectories. Biophysical Journal,107(10), 2345-2351.</a></font>
+              </p>
+              <p>
+              A renormalization group (RG) approach offers a natural way to analyze anomalous diffusion processes. We devised an algorithm using a recently proposed RG operator (<a href="http://link.springer.com/article/10.1007/s10955-012-0630-7">O'Malley 2013</a>) to find the distribution  <i>f<sub>P</sub></i> of a random variable <i>p</i> that is analogous to an anomalous diffusion coefficient. Using this algorithm, we were able to observe process transitions in our previously acquired data, where a molecule switches between free subdiffusion and cytoskeletal superdiffusion, an example of which is shown in Figure 2.
+              </p>
+              <div style="text-align:center">
+                <a href="./resources/rp_fig_2.png" imageanchore="1">
+                <img border="0" width="70%"src="./resources/rp_fig_2.png"/>
+                </a>
+              </div>
+              <div style="text-align:center">
+                <font size="2">Figure 2: A moving window analysis computing the evolution of the distribution fP for a simulated and experimental trajectory. (a) The first 200 time points are a fractional Brownian motion with Hurst exponent H = 0.25, the following 200  time points are an fBM with H = 0.75 and the last 200 time points are a Levy flight with a stability parameter α = 1. </font>
+              </div>
+              <br>
+              <p>
+              The algorithm we developed found a good fit to both simulated and experimental data by using discrepancy  statistics from Kuiper's test, similar to the Kolmogorov-Smirnov test, to find the distribution that best fit the data. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default" id="panel3">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#DWMRI" style="background-color:lightsteelblue;">
+            <h4 class="panel-title">
+            <a class="accordion-toggle">
+              Modeling Diffusion-Weighted Magnetic Resonance Imaging
+            </a>
+            </h4>
+          </div>
+          <div id="DWMRI" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>
+              Diffusion-weighted magnetic resonance imaging (DW-MRI or DWI) is a noninvasive way to obtain a microstructural description of human tissues and organs. Tissue microstructure undergoes changes during development and in a variety of diseases and injuries, making it an important metric in medical diagnosis and treatment. Although the observed signal is well described by theory in the case of simple geometric shapes, real porous materials such as biological tissue have complex geometric descriptions. We are currently investigating a variety of problems in DWI using Monte Carlo simulations of water diffusion in realistic reconstructions of neuronal tissue.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>        
+  <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  
+  <!--script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72932712-1', 'auto');
+    ga('send', 'pageview');
+
+  </script-->
+</div>
+</body>
+</html>
