@@ -41,6 +41,15 @@ p {
 	font-weight: 700;
 }
 
+#blog p {
+	color: #777;
+        font-size: 18px;
+        text-align:justify;
+}
+
+
+
+
 #contact a {
 	color: #777;
 	font-weight: 400;
@@ -241,4 +250,9 @@ a:hover {
     cursor: pointer;
 }
 
+.bensbread {
+    font-family: 'Shadows Into Light', cursive;
+    color: #837258;
+    font-weight: 900;
+}
 
