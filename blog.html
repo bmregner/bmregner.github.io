@@ -16,6 +16,7 @@
   <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
   <link type='text/css' rel='stylesheet' href='css/style.css'/>
 
 </head>
@@ -58,38 +59,38 @@
     <div class="container" >
     <hr>
     <div class="col-md-offset-2 col-md-8">
-      <div id="bio" style="text-align: left">
+      <div id="blog" style="text-align: left">
         <p>
         
-        <h2>Insights for All</h2>
+        <h2 align="center">Insights for All</h2>
 <p>
 As an Insight Fellow in the Summer session of 2016 I worked as a consultant
-with a local start-up. They are business-to-business company that provides a platform to
-track user events on an app or website and deploy targetted messaging to users
-based on those events. Messages can be sent at both specific times or through
+with a local start-up. They are a business-to-business company that provides a platform to
+track user events on an app or website and deploy targeted messaging to users
+based on those events. Messages can be sent at specific times or through
 event triggers and can be delivered through emails, mobile push notifications
 and SMS. 
 </p>
 <p>
 My partner company has a variety of clients, some of which have not yet started
-to build a data team. The problem I solved for them is to provide
+to build a data team. The problem I solved for them is providing 
 these clients with actionable insights that don't require deep statistical
 knowledge or the interpretation of a complicated figure or chart. To that end,
 I built a pipeline that performs analysis on user events and timestamps to
 produce clear, textual insights that can be readily acted upon.
 </p>
 <p>
-As an example, let's look at a fictionalized version of my partner's many
-clients. "Ben's Bread" is a new app through which you can order freshly baked
-loaves of bread delivered directly to customers in the Valley. To be explicitly
-clear, the data shown below is real data from a client, but in
-order to protect client identity, the names of events have been changed and the
-timestamps have been shifted in time.
+As an example, let's take a look at a fictionalized version of one of many 
+clients. <span class="bensbread">Ben's Bread</span> is a new app providing
+delivery of freshly baked bread directly to
+your door. To be explicitly clear, the data shown below is real data from a
+client, but in order to protect client identity, the names of events have been
+changed and the timestamps have been shifted in time.
 </p>
 <p>
 When a client sits down to set up a new messaging campaign, one
 of the first questions they might ask is how maximize the bread and butter action for 
-their app. In the case of "Ben's Bread", this action is <b>Buy Bread</b> and
+their app. In the case of <span class="bensbread">Ben's Bread</span>, this action is <b>Buy Bread</b> and
 corresponds to a user putting in an order for a bread delivery. Using a random
 forest classifier as implemented in the Python package scikit-learn, good
 discrimination can be made between users, with an area under the ROC curve of
@@ -122,11 +123,13 @@ readily computed. The top 5 most important events are reported to the client:
     </ul>
 </blockquote>
 
+<p>
 The next step in the pipeline is to quantify the importance of these features.
 I compute the conditional probability of a user performing <b>Buy Bread</b> or
 not, given the user has performed one of the important features. Taking the ratio 
 of these values quantifies the impact of different events on <b>Buy
-Bread</b>. For Ben's Bread, the output from this part of the pipeline is:
+Bread</b>. For <span class="bensbread">Ben's Bread</span>, the output from this part of the pipeline is:
+</p>
 
 <blockquote>
 Users who...
@@ -144,9 +147,9 @@ validation that the app is working, since users must pass through this page in
 order to make a purchase. Users who look at product details trigger a <b>Doughy
     Details</b> event, and users who have looked at product details are 7.5
 times more likely to <b>Buy Bread</b>. This is a useful insight, because it
-shows that users who look at the product page are exciteded by what they see and
+shows that users who look at the product page are excited by what they see and
 make a purchase at an increased rate. Because this feature is clearly having a
-postivie impact on the user experince, it would be a good feature to focus 
+positive impact on the user experience, it would be a good feature to focus 
 A/B testing on to see if user engagement can be further encouraged.  
 </p>
 
@@ -183,18 +186,18 @@ Users are mostly likely to...
 </ul>
 </blockquote> 
 
-<p> The start-up I partnered with is excited about these results, which are
-applicable to all of their many clients. I delivered the pipeline outlined in
-this blog post in a Jupyter notebook, and they are currently implementing it
+<p> The start-up I partnered with is excited about the pipeline I've described here, 
+which can be applied to all of their clients. I delivered the pipeline 
+in a Jupyter notebook, and they are currently implementing it
 into their user interface.  </p>
 
 <h2>Model Details</h2> <p> The features available for each company are a log of
 user ids, event names, and timestamps. The engineered features for
 classification are counts of each event type for each user. The key problems in
-interpretting this data is that many features will be irrelevant, the
+interpreting this data is that many features will be irrelevant, the
 dimensionality may be very high depending on how many a client has defined,
 some events will likely be correlated, and most importantly the results of a
-classifiction algorithm need to be interpretable. For these reasons, I decided
+classification algorithm need to be interpretable. For these reasons, I decided
 to use a random forest classifier, which can handle all of these problems well.
 </p>
 
